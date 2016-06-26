@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :projects
+  resources :authors
   get '/posts' => 'posts#index', :as => :posts
 
   get 'posts/new', :as => :new_post
