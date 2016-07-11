@@ -1,2 +1,8 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<h1><%= @post.title %></h1>
+<p><%= @post.context %></p>
+<%= link_to 'Edit', edit_post_path %>
+<%#= link_to 'Delete', @post.destroy %>
+<%#= link_to("Destroy", posts_path, method: :delete) %>
+<%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+

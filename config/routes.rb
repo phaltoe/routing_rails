@@ -1,19 +1,7 @@
 Rails.application.routes.draw do
   resources :projects
   resources :authors
-  get '/posts' => 'posts#index', :as => :posts
-
-  get 'posts/new', :as => :new_post
-  
-  get 'posts/:id' => 'posts#show', :as => :post
-
-  delete 'posts/:id' => 'posts#destroy'
-
-  get 'posts/:id/edit' => 'posts#edit', :as => :edit_post
-
-  post 'posts/create' => 'posts#create'
-
-  patch 'posts/:id' => 'posts#update'
+  resources :posts
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
